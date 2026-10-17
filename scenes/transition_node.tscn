@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ydxlrlh8mydn"]
 
 [ext_resource type="Script" uid="uid://f761vjpftkse" path="res://scripts/transition.gd" id="1_ub4dv"]
-[ext_resource type="Texture2D" uid="uid://dsr0xl2cj6kro" path="res://icon.svg" id="2_wefcm"]
+[ext_resource type="Texture2D" uid="uid://c801yud8bp2l5" path="res://images/jerma_face.png" id="2_wefcm"]
 
 [node name="TransitionNode" type="Node2D" unique_id=507145665 node_paths=PackedStringArray("transition_node")]
 script = ExtResource("1_ub4dv")
