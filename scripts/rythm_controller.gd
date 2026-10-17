@@ -19,28 +19,24 @@ func _ready() -> void:
 	
 func beatHit(x) -> void:
 	barPos = i-1
-	interaction = level.bars[j][barPos]
-	await get_tree().create_timer(delay).timeout
-	beatActive = true
-	
-	await get_tree().create_timer(beatWindow).timeout
-	beatActive = false
-	
-	i += 1
-	if i == 5:
-		i = 1
-		j += 1
+	if j < level.bars.size():
+		interaction = level.bars[j][barPos]
+		await get_tree().create_timer(delay).timeout
+		beatActive = true
+		
+		await get_tree().create_timer(beatWindow).timeout
+		beatActive = false
+		
+		i += 1
+		if i == 5:
+			i = 1
+			j += 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if interaction == "l" and Input.is_action_just_released("jerma") and beatActive:
+	if interaction == "l" and Input.is_action_just_released("jerma") and not Input.is_action_just_released("enemy") and beatActive:
 		level.magicalMysteryScript.onSuccess(interaction)
-	if interaction == "r" and Input.is_action_just_released("enemy") and beatActive:
+	if interaction == "r" and Input.is_action_just_released("enemy") and not Input.is_action_just_released("jerma") and beatActive:
 		level.magicalMysteryScript.onSuccess(interaction)
 	if interaction == "b" and Input.is_action_just_released("jerma") and Input.is_action_just_released("enemy") and beatActive:
 		level.magicalMysteryScript.onSuccess(interaction)
-	if Input.is_action_just_released("jerma") and beatActive:
-		print("RAHHH")
-		
-	if Input.is_action_pressed("enemy"):
-		print("1234"[2])

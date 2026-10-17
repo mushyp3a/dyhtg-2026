@@ -10,5 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func onSuccess(interaction: String) -> void:
+static func onSuccess(interaction: String) -> void:
 	print("Success")
