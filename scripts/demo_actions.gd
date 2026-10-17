@@ -12,3 +12,6 @@ func _process(delta: float) -> void:
 
 static func onSuccess(interaction: String) -> void:
 	print("Success")
+	
+static func onFailure(interaction: String) -> void:
+	print("fail fail fail pathetic")
