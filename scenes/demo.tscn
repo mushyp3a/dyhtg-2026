@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://04s6o3n6h372"]
+
+[ext_resource type="Texture2D" uid="uid://dsr0xl2cj6kro" path="res://icon.svg" id="1_tqfh0"]
+[ext_resource type="Script" uid="uid://cn48w0dvw1s38" path="res://scripts/rythm-pulser.gd" id="2_ba4lm"]
+[ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="3_l20p6"]
+[ext_resource type="Resource" uid="uid://d3oqybgvqw36v" path="res://resources/test.tres" id="4_b0nem"]
+[ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="4_vephn"]
+
+[node name="Node2D" type="Node2D" unique_id=800226027]
+position = Vector2(164, 114)
+
+[node name="Demo Guy" type="Sprite2D" parent="." unique_id=633613741]
+position = Vector2(-59, 185)
+scale = Vector2(0.61718756, 0.61718756)
+texture = ExtResource("1_tqfh0")
+script = ExtResource("2_ba4lm")
+
+[node name="RythmController" type="Node2D" parent="." unique_id=1127480072]
+position = Vector2(-164, -114)
+script = ExtResource("4_vephn")
+level = ExtResource("4_b0nem")
+
+[node name="RythmNotifier" type="Node" parent="." unique_id=1134784558]
+script = ExtResource("3_l20p6")
+bpm = 120.0
+beat_length = 0.5
+running = true
+metadata/_custom_type_script = "uid://dos3qhffr4v0a"
