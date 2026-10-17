@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Level_Beats" format=3 uid="uid://d3oqybgvqw36v"]
+
+[ext_resource type="Script" uid="uid://pyso7w8if4en" path="res://scripts/demo_actions.gd" id="1_iq3t6"]
+[ext_resource type="Script" uid="uid://dthwm7vrtp53j" path="res://scripts/level_res.gd" id="1_ytc5p"]
+
+[resource]
+script = ExtResource("1_ytc5p")
+bars = ["0000", "00l0", "00r0", "00b0"]
+magicalMysteryScript = ExtResource("1_iq3t6")
+metadata/_custom_type_script = "uid://dthwm7vrtp53j"

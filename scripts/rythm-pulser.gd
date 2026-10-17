@@ -19,24 +19,6 @@ func scaler(a) -> void:
 	if i == 4:
 		$".".scale = Vector2(2,2)
 		
-	if i == 3:
-		beatHit()
-		
 	i += 1
 	if i == 5:
 		i = 1
-	
-func beatHit() -> void:
-	await get_tree().create_timer(delay).timeout
-	beatActive = true
-	await get_tree().create_timer(beatWindow).timeout
-	beatActive = false
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_just_released("jerma") and beatActive:
-		print("RAHHH")
-	pass
-
-func _physics_process(delta: float) -> void:
-	pass
