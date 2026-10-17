@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://dnab2hmrdrdq5"]
+
+[ext_resource type="Script" uid="uid://qftlrgqfmm06" path="res://ui stuff/credits.gd" id="1_4yagt"]
+[ext_resource type="Texture2D" uid="uid://ck54e40snlgbt" path="res://images/pile of gold.webp" id="1_opd63"]
+
+[node name="credits" type="Control" unique_id=793940]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4yagt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1415904960]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_opd63")
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=2042363444]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.125
+offset_right = -1112.0
+offset_bottom = -41.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="back" type="Button" parent="MarginContainer2" unique_id=1825076470]
+custom_minimum_size = Vector2(75, 35)
+custom_maximum_size = Vector2(75, 35)
+layout_mode = 2
+text = "BACK
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1882522506]
+custom_minimum_size = Vector2(425, 350)
+custom_maximum_size = Vector2(425, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -162.5
+offset_right = 287.5
+offset_bottom = 162.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1881206946]
+layout_mode = 2
+color = Color(0.54901963, 0.6745098, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1516177517]
+custom_minimum_size = Vector2(425, 350)
+custom_maximum_size = Vector2(425, 350)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1221316759]
+custom_minimum_size = Vector2(395, 320)
+custom_maximum_size = Vector2(395, 320)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=403140981]
+custom_minimum_size = Vector2(200, 65)
+custom_maximum_size = Vector2(200, 65)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/normal_font_size = 45
+text = "CREDITS"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=306937377]
+custom_minimum_size = Vector2(395, 250)
+custom_maximum_size = Vector2(395, 250)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "credit where credits due 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer2/back" to="." method="_on_back_pressed"]
