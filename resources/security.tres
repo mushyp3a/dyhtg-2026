@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Level_Beats" format=3 uid="uid://cof0wmd8kq6i0"]
+
+[ext_resource type="Script" uid="uid://dthwm7vrtp53j" path="res://scripts/level_res.gd" id="1_tci4x"]
+
+[resource]
+script = ExtResource("1_tci4x")
+metadata/_custom_type_script = "uid://dthwm7vrtp53j"

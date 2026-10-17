@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cluo1q85dfgc4"]
+
+[ext_resource type="Texture2D" uid="uid://bwp0k7ha5ih1b" path="res://images/hallwayBackgroundCrop.png" id="1_417ia"]
+[ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="1_mx355"]
+[ext_resource type="Texture2D" uid="uid://d0d1pvbyf23ku" path="res://images/jerma_hiding.png" id="2_bg5n2"]
+[ext_resource type="Resource" uid="uid://d3oqybgvqw36v" path="res://resources/test.tres" id="2_g2ggn"]
+[ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="3_20hls"]
+[ext_resource type="Texture2D" uid="uid://tpmp1xe2lh6w" path="res://images/jerma_security.png" id="4_6d64a"]
+
+[node name="Security" type="Control" unique_id=1454666892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RythmController" type="Node2D" parent="." unique_id=2128119923]
+position = Vector2(-164, -114)
+script = ExtResource("1_mx355")
+level = ExtResource("2_g2ggn")
+
+[node name="RythmNotifier" type="Node" parent="." unique_id=821970493]
+script = ExtResource("3_20hls")
+bpm = 120.0
+beat_length = 0.5
+running = true
+metadata/_custom_type_script = "uid://dos3qhffr4v0a"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1434068184]
+custom_minimum_size = Vector2(5342.788, 1149.16)
+custom_maximum_size = Vector2(8000, 1149.16)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5328.0
+offset_bottom = 501.16003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.566, 0.566)
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=67655286]
+layout_mode = 2
+texture = ExtResource("1_417ia")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=1663754565]
+layout_mode = 2
+texture = ExtResource("1_417ia")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1373775323]
+layout_mode = 2
+texture = ExtResource("1_417ia")
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=386841492]
+layout_mode = 2
+texture = ExtResource("1_417ia")
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer" unique_id=821153414]
+layout_mode = 2
+texture = ExtResource("1_417ia")
+
+[node name="JermaHiding" type="Sprite2D" parent="." unique_id=1446365730]
+position = Vector2(115.625, 389.32236)
+scale = Vector2(0.73553056, 0.73553056)
+texture = ExtResource("2_bg5n2")
+
+[node name="JermaSecurity" type="Sprite2D" parent="." unique_id=1630277126]
+position = Vector2(480, 304)
+scale = Vector2(0.5696864, 0.5696864)
+texture = ExtResource("4_6d64a")
+offset = Vector2(-17.065, 0)
