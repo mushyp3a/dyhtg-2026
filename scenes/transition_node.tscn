@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ydxlrlh8mydn"]
+
+[ext_resource type="Script" uid="uid://f761vjpftkse" path="res://scripts/transition.gd" id="1_ub4dv"]
+[ext_resource type="Texture2D" uid="uid://dsr0xl2cj6kro" path="res://icon.svg" id="2_wefcm"]
+
+[node name="TransitionNode" type="Node2D" unique_id=507145665 node_paths=PackedStringArray("transition_node")]
+script = ExtResource("1_ub4dv")
+transition_node = NodePath(".")
+transition_max_time = 2.0
+transition_max_rot = 720.0
+transition_max_scale = Vector2(10, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1793463012]
+texture = ExtResource("2_wefcm")
