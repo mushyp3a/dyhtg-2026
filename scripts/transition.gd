@@ -2,7 +2,7 @@ extends Node
 
 class_name Transition
 
-var transitioning: bool = true
+var transitioning: bool = false
 var transition_state: int = 0
 var transition_time: float = 0
 
@@ -10,6 +10,7 @@ var transition_time: float = 0
 @export var transition_max_time: float
 @export var transition_max_rot: float
 @export var transition_max_scale: Vector2
+@export var transition_base_scale: Vector2
 
 func start_transitioning() -> void:
 	transitioning = true
@@ -32,3 +33,5 @@ func _process(delta: float) -> void:
 		else:
 			transition_node.scale = transition_max_scale - coef*transition_max_scale
 		transition_node.rotation_degrees = coef*transition_max_rot
+	else:
+		transition_node.scale = transition_base_scale

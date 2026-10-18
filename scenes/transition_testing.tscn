@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://l0d4mlu7afu1"]
+
+[ext_resource type="PackedScene" uid="uid://ydxlrlh8mydn" path="res://scenes/transition_node.tscn" id="1_77u2i"]
+[ext_resource type="Script" uid="uid://c7xc38uwd0kx2" path="res://scripts/scene_changer.gd" id="2_3dn78"]
+
+[node name="TransitionTesting" type="Node2D" unique_id=496920936]
+
+[node name="TransitionNode" parent="." unique_id=507145665 instance=ExtResource("1_77u2i")]
+
+[node name="SceneChanger" type="Node" parent="." unique_id=1314649445]
+script = ExtResource("2_3dn78")
