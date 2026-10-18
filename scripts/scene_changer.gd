@@ -32,7 +32,7 @@ func _ready() -> void:
 	add_child(music_player)
 
 func next_level(delay: float = 0):
-  music_player.stop()
+	music_player.stop()
 	await get_tree().create_timer(delay).timeout
 	current_level = current_level + 1
 	if current_level < levels.size():
