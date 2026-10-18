@@ -5,7 +5,9 @@ const run = preload("res://images/jerma_dash.png")
 static var moving = false
 static var distance_moved = 0.0
 
-
+static func onBeat(interaction: String) -> void:
+	print(interaction)
+	
 static func onSuccess(interaction: String) -> void:
 	print("past mistakes are just new information")
 	rounds = rounds + 1

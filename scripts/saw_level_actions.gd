@@ -21,6 +21,9 @@ static func start_level():
 func _process(delta: float) -> void:
 	pass
 
+static func onBeat(interaction: String) -> void:
+	print(interaction)
+	
 static func onSuccess(interaction: String) -> void:
 	print("Succeed the saw mission! ^v^")
 	state += 1
