@@ -8,7 +8,6 @@ var music = [
 	#preload("res://sfx/StageTwoGuards.wav"),
 	#preload("res://sfx/StageFiveCombinationLock.wav"),
 	preload("res://sfx/StageSixSafePunching.wav"),
-	preload("res://sfx/StageFiveCombinationLock.wav"),
 ]
 
 
@@ -20,9 +19,7 @@ var levels = [
 	# "res://scenes/hacking.tscn",
 	#"res://scenes/combination_lock_level.tscn",
 	"res://scenes/punching.tscn",
-	#"res://scenes/ending_scene.tscn",
-	"res://ui stuff/credits"
-	
+	#"res://scenes/ending_scene.tscn",	
 ]
 
 var transition_node: TransitionNode
