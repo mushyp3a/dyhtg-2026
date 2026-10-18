@@ -41,6 +41,4 @@ func _process(delta: float) -> void:
 func restart_level():
 	print("Transitioning... >=)")
 	restart_transition_node.start_transitioning()
-	transition_node.show()
-	transition_node.start_transitioning()
 	#get_tree().reload_current_scene()
