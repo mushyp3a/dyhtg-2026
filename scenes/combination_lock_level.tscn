@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dxl7q83h4dttj"]
+
+[ext_resource type="Texture2D" uid="uid://c6w4wajc142kb" path="res://images/combination_lock_background_resized.png" id="1_l066u"]
+[ext_resource type="Texture2D" uid="uid://bgvlhcr1ugme3" path="res://images/combination_lock.png" id="2_p5fye"]
+[ext_resource type="Script" uid="uid://cjxry6jgi51pk" path="res://scripts/combination_lock.gd" id="2_xyjod"]
+
+[node name="CombinationLockLevel" type="Node2D" unique_id=132758335]
+
+[node name="Background" type="Node2D" parent="." unique_id=329000935]
+position = Vector2(576, 324)
+
+[node name="BackgroundSprite2D" type="Sprite2D" parent="Background" unique_id=1220814248]
+texture = ExtResource("1_l066u")
+
+[node name="Lock" type="Node2D" parent="." unique_id=552818408 node_paths=PackedStringArray("lock")]
+script = ExtResource("2_xyjod")
+lock = NodePath("Sprite2D")
+segments = 9
+rotate_max_time = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Lock" unique_id=1290691608]
+position = Vector2(576, 324)
+texture = ExtResource("2_p5fye")

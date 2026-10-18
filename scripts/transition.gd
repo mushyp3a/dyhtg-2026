@@ -1,5 +1,7 @@
 extends Node
 
+class_name Transition
+
 var transitioning: bool = true
 var transition_state: int = 0
 var transition_time: float = 0
@@ -9,7 +11,7 @@ var transition_time: float = 0
 @export var transition_max_rot: float
 @export var transition_max_scale: Vector2
 
-func start_start() -> void:
+func start_transitioning() -> void:
 	transitioning = true
 	transition_time = 0
 	transition_state = 0

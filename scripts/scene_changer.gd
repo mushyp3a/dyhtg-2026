@@ -12,14 +12,17 @@ var levels = [
 	#"res://scenes/ending_scene.tscn"
 ]
 
+var transition_node: Transition
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	transition_node = get_node("TransitionNode") as Transition
 
 func next_level():
 	current_level = current_level + 1
 	if current_level < levels.size():
 		get_tree().change_scene_to_file(levels[current_level])
+		transition_node.start_transitioning()
 
 #this function exists for replaying game
 #other ways to do this if it breaks a bunch of shit
