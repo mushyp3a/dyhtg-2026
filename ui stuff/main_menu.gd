@@ -23,3 +23,7 @@ func _on_level_select_pressed() -> void:
 	#scene changer test below delete
 	SceneChanger.next_level()
 	pass # Replace with function body.
+
+
+func _on_start_pressed() -> void:
+	SceneChanger.start_game()

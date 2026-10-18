@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://76qlow6awbg3" path="res://images/safepunchroom.png" id="2_j1wmm"]
 [ext_resource type="Resource" uid="uid://dpdeooqqh6yiu" path="res://resources/punching.tres" id="2_pfdg8"]
 [ext_resource type="Texture2D" uid="uid://dw4fm1b7rfoy0" path="res://images/jerma_right_punch.png" id="4_pfdg8"]
+[ext_resource type="AudioStream" uid="uid://bw4k36xkgjp4u" path="res://sfx/StageSixSafePunching.wav" id="6_bvpf4"]
 
 [node name="Node2D" type="Node2D" unique_id=960127294]
 
@@ -32,3 +33,6 @@ texture = ExtResource("2_j1wmm")
 position = Vector2(799, 402)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("4_pfdg8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2089315153]
+stream = ExtResource("6_bvpf4")
