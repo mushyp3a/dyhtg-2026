@@ -1,6 +1,7 @@
 extends Node
 
 static var i = 1
+static var max_state: int = 7
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,9 +27,12 @@ static func onSuccess(interaction: String) -> void:
 		var newCamera = camera.position + Vector2(757.487, 0)
 		camera.create_tween().tween_property(camera, "position", newCamera, 0.3)
 	i += 1
+	if i > max_state:
+		i = 1
+		SceneChanger.next_level(0.7)
 # do this to alternate between moving jerma using above if then moving camera using else for next success ie holding down success to move jerma and release success to move camera
 
 static func onFailure(interaction: String) -> void:
 	print("fail fail fail pathetic")
 	i = 1
-	(Engine.get_main_loop() as SceneTree).reload_current_scene()
+	SceneChanger.restart_level()
