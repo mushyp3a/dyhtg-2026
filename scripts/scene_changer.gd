@@ -4,20 +4,20 @@ var music_player: AudioStreamPlayer
 
 #music
 var music = [
-	#preload("res://sfx/StageOneSawing.wav"),
-	#preload("res://sfx/StageTwoGuards.wav"),
-	#preload("res://sfx/StageFiveCombinationLock.wav"),
+	preload("res://sfx/StageOneSawing.wav"),
+	preload("res://sfx/StageTwoGuards.wav"),
+	preload("res://sfx/StageFiveCombinationLock.wav"),
 	preload("res://sfx/StageSixSafePunching.wav"),
 ]
 
 
 # MAKE SURE TO UNCOMMENT AFTER COMMIT
 var levels = [
-	# "res://scenes/saw_level.tscn",
-	#"res://scenes/security.tscn",
+	"res://scenes/saw_level.tscn",
+	"res://scenes/security.tscn",
 	#"res://scenes/lasers.tscn",
 	# "res://scenes/hacking.tscn",
-	#"res://scenes/combination_lock_level.tscn",
+	"res://scenes/combination_lock_level.tscn",
 	"res://scenes/punching.tscn",
 	#"res://scenes/ending_scene.tscn",	
 ]
