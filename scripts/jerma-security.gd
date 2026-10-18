@@ -11,7 +11,7 @@ static func onSuccess(interaction: String) -> void:
 	rounds = rounds + 1
 	if rounds == 4:
 		SceneChanger.next_level()
-	#very sorry
+	#im so so sorry
 	#i tried my very best on this
 	#could not het it to work :(
 

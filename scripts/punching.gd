@@ -13,6 +13,8 @@ func _process(delta: float) -> void:
 static func onSuccess(interaction: String) -> void:
 	var scene = Engine.get_main_loop().current_scene
 	var character = scene.find_child("jerma", true, false)
+	# above two lines are for finding jerma its werid cause file
+	#isnt on same nodes as sprite2d
 	if interaction == "l":
 		print("left baby")
 		character.texture = leftPunch
