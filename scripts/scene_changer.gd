@@ -20,7 +20,8 @@ func _ready() -> void:
 	transition_node = get_node("/root/TransitionNode") as TransitionNode
 	restart_transition_node = get_node("/root/RestartTransitionNode") as RestartTransitionNode
 
-func next_level():
+func next_level(delay: float = 0):
+	await get_tree().create_timer(delay).timeout
 	current_level = current_level + 1
 	if current_level < levels.size():
 		get_tree().change_scene_to_file(levels[current_level])
