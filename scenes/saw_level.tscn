@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://muet7gyaigpy" path="res://scenes/line_scene.tscn" id="3_l20sg"]
 [ext_resource type="Texture2D" uid="uid://dl6un4o48wujs" path="res://images/saw_rotated.png" id="4_jbwg5"]
 [ext_resource type="Script" uid="uid://b8iktm6n0fx8w" path="res://scripts/saw_level_actions.gd" id="5_1rkqd"]
+[ext_resource type="PackedScene" uid="uid://iiqim6ea86ak" path="res://scenes/explosion_transition.tscn" id="6_pi2s3"]
 
 [node name="SawLevel" type="Node2D" unique_id=217463069]
 
@@ -28,6 +29,12 @@ texture = ExtResource("4_jbwg5")
 
 [node name="Slices" type="Node2D" parent="." unique_id=1154602515]
 
-[node name="SawActions" type="Node" parent="." unique_id=902620358 node_paths=PackedStringArray("saw")]
+[node name="SawActions" type="Node" parent="." unique_id=902620358 node_paths=PackedStringArray("saw", "explosion_transition_node")]
 script = ExtResource("5_1rkqd")
 saw = NodePath("../SlicePlacer")
+explosion_transition_node = NodePath("../ExplosionTransitionNode")
+
+[node name="ExplosionTransitionNode" parent="." unique_id=507145665 instance=ExtResource("6_pi2s3")]
+z_index = 900
+position = Vector2(600, 300)
+transition_max_scale = Vector2(2, 2)

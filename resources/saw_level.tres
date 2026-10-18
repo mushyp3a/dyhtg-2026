@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-[gd_resource type="Resource" script_class="Level_Beats" format=3 uid="uid://dpay8lo01sftd"]
-
-[ext_resource type="Script" uid="uid://b8iktm6n0fx8w" path="res://scripts/saw_level_actions.gd" id="1_1q3ec"]
-=======
 [gd_resource type="Resource" script_class="Level_Beats" format=3 uid="uid://b4m65sndfjpls"]
 
 [ext_resource type="Script" path="res://scripts/saw_level_actions.gd" id="1_1q3ec"]
->>>>>>> main
+
 [ext_resource type="Script" uid="uid://dthwm7vrtp53j" path="res://scripts/level_res.gd" id="1_lvrqs"]
 
 [resource]
 script = ExtResource("1_lvrqs")
-<<<<<<< HEAD
-=======
+
 bars = ["", "", "", "", ""]
->>>>>>> main
+
 magicalMysteryScript = ExtResource("1_1q3ec")
 metadata/_custom_type_script = "uid://dthwm7vrtp53j"
