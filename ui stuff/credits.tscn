@@ -41,18 +41,18 @@ text = "BACK
 "
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1882522506]
-custom_minimum_size = Vector2(425, 350)
-custom_maximum_size = Vector2(425, 350)
+custom_minimum_size = Vector2(425, 400)
+custom_maximum_size = Vector2(425, 400)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -287.5
-offset_top = -162.5
-offset_right = 287.5
-offset_bottom = 162.5
+anchors_preset = -1
+anchor_left = 0.316
+anchor_top = 0.19100001
+anchor_right = 0.684
+anchor_bottom = 0.809
+offset_left = -75.53201
+offset_top = 37.731987
+offset_right = 75.53198
+offset_bottom = -37.731995
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -61,8 +61,8 @@ layout_mode = 2
 color = Color(0.54901963, 0.6745098, 1, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1516177517]
-custom_minimum_size = Vector2(425, 350)
-custom_maximum_size = Vector2(425, 350)
+custom_minimum_size = Vector2(425, 400)
+custom_maximum_size = Vector2(425, 400)
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
@@ -73,14 +73,17 @@ theme_override_constants/margin_bottom = 15
 custom_minimum_size = Vector2(395, 320)
 custom_maximum_size = Vector2(395, 320)
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=403140981]
-custom_minimum_size = Vector2(200, 65)
-custom_maximum_size = Vector2(200, 65)
+custom_minimum_size = Vector2(395, 65)
+custom_maximum_size = Vector2(395, 65)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/normal_font_size = 45
 text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=306937377]
 custom_minimum_size = Vector2(395, 250)
@@ -89,9 +92,15 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 bbcode_enabled = true
-text = "credit where credits due 
+text = "credit where credit is due
+we all kind of nailed this
+espically fares with awesome music
+kieran offical jerma fan
+mackenzie with his holy beat code
+and
+oliver and leia being crazy enough
+to stay up all night making levels
 "
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="pressed" from="MarginContainer2/back" to="." method="_on_back_pressed"]

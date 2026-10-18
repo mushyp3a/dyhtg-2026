@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d2tu6lesbgfh"]
+
+[ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="1_5yfs8"]
+[ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="1_7wbwj"]
+[ext_resource type="Texture2D" uid="uid://76qlow6awbg3" path="res://images/safepunchroom.png" id="2_j1wmm"]
+[ext_resource type="Resource" uid="uid://dpdeooqqh6yiu" path="res://resources/punching.tres" id="2_pfdg8"]
+[ext_resource type="Texture2D" uid="uid://vtcxelbq4uxd" path="res://images/jerma_neutral_punch.png" id="5_bvpf4"]
+[ext_resource type="AudioStream" uid="uid://bw4k36xkgjp4u" path="res://sfx/StageSixSafePunching.wav" id="6_bvpf4"]
+
+[node name="Node2D" type="Node2D" unique_id=960127294]
+
+[node name="RythmController" type="Node2D" parent="." unique_id=661826048]
+script = ExtResource("1_7wbwj")
+level = ExtResource("2_pfdg8")
+
+[node name="RythmNotifier" type="Node" parent="." unique_id=276379582]
+script = ExtResource("1_5yfs8")
+bpm = 120.0
+beat_length = 0.5
+running = true
+metadata/_custom_type_script = "uid://dos3qhffr4v0a"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1552801047]
+custom_minimum_size = Vector2(1152, 648)
+custom_maximum_size = Vector2(1152, 648)
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 1922.0
+offset_bottom = 1077.0
+texture = ExtResource("2_j1wmm")
+
+[node name="jerma" type="Sprite2D" parent="." unique_id=345945378]
+position = Vector2(799, 402)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_bvpf4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2089315153]
+stream = ExtResource("6_bvpf4")

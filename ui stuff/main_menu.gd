@@ -17,3 +17,13 @@ func _on_quit_pressed() -> void:
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://ui stuff/credits.tscn")
+
+
+func _on_level_select_pressed() -> void:
+	#scene changer test below delete
+	SceneChanger.next_level()
+	pass # Replace with function body.
+
+
+func _on_start_pressed() -> void:
+	SceneChanger.start_game()

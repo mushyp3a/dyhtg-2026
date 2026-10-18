@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cw8e3fmacum5k"]
+
+[ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="1_7s4so"]
+[ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="1_fscln"]
+[ext_resource type="Texture2D" uid="uid://b56xhkjtbal3g" path="res://images/brick_wall_resized.png" id="1_pi2s3"]
+[ext_resource type="Script" uid="uid://dcb0ivcfwekri" path="res://scripts/saw_slicer.gd" id="2_6gmm1"]
+[ext_resource type="Resource" uid="uid://b4m65sndfjpls" path="res://resources/saw_level.tres" id="2_dj5fx"]
+[ext_resource type="PackedScene" uid="uid://muet7gyaigpy" path="res://scenes/line_scene.tscn" id="3_l20sg"]
+[ext_resource type="Texture2D" uid="uid://dl6un4o48wujs" path="res://images/saw_rotated.png" id="4_jbwg5"]
+[ext_resource type="Script" uid="uid://b8iktm6n0fx8w" path="res://scripts/saw_level_actions.gd" id="5_1rkqd"]
+[ext_resource type="PackedScene" uid="uid://iiqim6ea86ak" path="res://scenes/explosion_transition.tscn" id="6_pi2s3"]
+
+[node name="SawLevel" type="Node2D" unique_id=217463069]
+
+[node name="RythemController" type="Node2D" parent="." unique_id=435304718]
+script = ExtResource("1_fscln")
+level = ExtResource("2_dj5fx")
+
+[node name="RythmNotifier" type="Node" parent="." unique_id=240128451]
+script = ExtResource("1_7s4so")
+bpm = 120.0
+beat_length = 0.5
+running = true
+metadata/_custom_type_script = "uid://dos3qhffr4v0a"
+
+[node name="Background" type="Node2D" parent="." unique_id=313767864]
+position = Vector2(576, 324)
+scale = Vector2(1.1, 1.1)
+
+[node name="WallSprite2D" type="Sprite2D" parent="Background" unique_id=1606584272]
+texture = ExtResource("1_pi2s3")
+
+[node name="SlicePlacer" type="Node2D" parent="." unique_id=842479282 node_paths=PackedStringArray("line_parent")]
+position = Vector2(300, 130)
+script = ExtResource("2_6gmm1")
+line = ExtResource("3_l20sg")
+line_parent = NodePath("../Slices")
+line_length = 120.0
+seg_size = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SlicePlacer" unique_id=1922702178]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_jbwg5")
+
+[node name="Slices" type="Node2D" parent="." unique_id=1154602515]
+
+[node name="SawActions" type="Node" parent="." unique_id=902620358 node_paths=PackedStringArray("saw", "explosion_transition_node")]
+script = ExtResource("5_1rkqd")
+saw = NodePath("../SlicePlacer")
+explosion_transition_node = NodePath("../ExplosionTransitionNode")
+
+[node name="ExplosionTransitionNode" parent="." unique_id=507145665 instance=ExtResource("6_pi2s3")]
+z_index = 900
+position = Vector2(600, 300)
+transition_max_scale = Vector2(2, 2)
