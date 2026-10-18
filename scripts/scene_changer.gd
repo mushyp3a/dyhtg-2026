@@ -12,12 +12,11 @@ var levels = [
 	#"res://scenes/ending_scene.tscn"
 ]
 
-@export var transition_node: Transition
+var transition_node: TransitionNode
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#transition_node = get_node("TransitionNode") as Transition
-	pass
+	transition_node = get_node("/root/TransitionNode") as TransitionNode
 
 func next_level():
 	current_level = current_level + 1
