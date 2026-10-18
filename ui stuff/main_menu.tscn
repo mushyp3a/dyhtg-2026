@@ -44,7 +44,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.9647059, 0.6509804, 0, 1)
 theme_override_font_sizes/font_size = 48
-text = "MAIN MENU"
+text = "BANK HEIST"
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1619846048]
 custom_minimum_size = Vector2(300, 300)
@@ -113,5 +113,6 @@ theme_override_font_sizes/font_size = 20
 text = "QUIT
 "
 
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/level select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
