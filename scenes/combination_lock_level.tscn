@@ -1,10 +1,24 @@
 [gd_scene format=3 uid="uid://dxl7q83h4dttj"]
 
+[ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="1_ixfqh"]
 [ext_resource type="Texture2D" uid="uid://c6w4wajc142kb" path="res://images/combination_lock_background_resized.png" id="1_l066u"]
+[ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="1_mxv5q"]
+[ext_resource type="Resource" uid="uid://dhe08fjd8rr6s" path="res://resources/CombinationLockLevel.tres" id="2_1fung"]
 [ext_resource type="Texture2D" uid="uid://bgvlhcr1ugme3" path="res://images/combination_lock.png" id="2_p5fye"]
 [ext_resource type="Script" uid="uid://cjxry6jgi51pk" path="res://scripts/combination_lock.gd" id="2_xyjod"]
 
 [node name="CombinationLockLevel" type="Node2D" unique_id=132758335]
+
+[node name="RythemController" type="Node2D" parent="." unique_id=749703751]
+script = ExtResource("1_ixfqh")
+level = ExtResource("2_1fung")
+
+[node name="RhythmNotifier" type="Node" parent="." unique_id=395312031]
+script = ExtResource("1_mxv5q")
+bpm = 120.0
+beat_length = 0.5
+running = true
+metadata/_custom_type_script = "uid://dos3qhffr4v0a"
 
 [node name="Background" type="Node2D" parent="." unique_id=329000935]
 position = Vector2(576, 324)
