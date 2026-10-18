@@ -47,17 +47,18 @@ theme_override_font_sizes/font_size = 48
 text = "BANK HEIST"
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1619846048]
-custom_minimum_size = Vector2(300, 300)
-custom_maximum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(300, 200)
+custom_maximum_size = Vector2(300, 200)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = -324.0
-offset_right = 50.0
+anchors_preset = -1
+anchor_left = 0.126
+anchor_top = 0.919
+anchor_right = 0.90400004
+anchor_bottom = 1.077
+offset_left = 280.848
+offset_top = -247.51202
+offset_right = -315.40808
+offset_bottom = -49.895996
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 10
@@ -69,7 +70,7 @@ theme_override_constants/margin_bottom = 10
 custom_minimum_size = Vector2(280, 280)
 custom_maximum_size = Vector2(280, 280)
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 10
 
 [node name="start" type="Button" parent="MarginContainer2/VBoxContainer" unique_id=1189330008]
 custom_minimum_size = Vector2(225, 75)
@@ -85,15 +86,6 @@ custom_minimum_size = Vector2(280, 215)
 custom_maximum_size = Vector2(280, 215)
 layout_mode = 2
 theme_override_constants/separation = 7
-
-[node name="level select" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer" unique_id=799458109]
-custom_minimum_size = Vector2(150, 40)
-custom_maximum_size = Vector2(150, 40)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 20
-text = "LEVEL SELECT"
 
 [node name="credits" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer" unique_id=1126202127]
 custom_minimum_size = Vector2(150, 40)
@@ -114,6 +106,5 @@ text = "QUIT
 "
 
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/level select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
