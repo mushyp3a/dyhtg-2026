@@ -3,9 +3,15 @@ extends Node
 static var state: int = 0
 static var max_state: int = 16
 
+static var sawSingleton: SawSlicer
+@export var saw: SawSlicer
+static var sceneChangerSingleton: SceneChanger
+@export var sceneChanger: SceneChanger
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	sawSingleton = saw
+	sceneChangerSingleton = sceneChanger
 	
 static func start_level():
 	state = 0
@@ -17,13 +23,13 @@ func _process(delta: float) -> void:
 static func onSuccess(interaction: String) -> void:
 	state += 1
 	if state < max_state:
-		pass
+		sawSingleton.slice()
 	elif state == max_state:
 		explode_wall()
 		max_state += 1
 	
 static func onFailure(interaction: String) -> void:
-	print("fail fail fail pathetic")
+	sceneChangerSingleton.restart_level()
 	
 static func explode_wall() -> void:
 	pass

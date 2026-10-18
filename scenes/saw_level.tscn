@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dcb0ivcfwekri" path="res://scripts/saw_slicer.gd" id="2_6gmm1"]
 [ext_resource type="PackedScene" uid="uid://muet7gyaigpy" path="res://scenes/line_scene.tscn" id="3_l20sg"]
 [ext_resource type="Texture2D" uid="uid://dl6un4o48wujs" path="res://images/saw_rotated.png" id="4_jbwg5"]
+[ext_resource type="Script" uid="uid://b8iktm6n0fx8w" path="res://scripts/saw_level_actions.gd" id="5_1rkqd"]
 
 [node name="SawLevel" type="Node2D" unique_id=217463069]
 
@@ -26,3 +27,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_jbwg5")
 
 [node name="Slices" type="Node2D" parent="." unique_id=1154602515]
+
+[node name="SawActions" type="Node" parent="." unique_id=902620358 node_paths=PackedStringArray("saw")]
+script = ExtResource("5_1rkqd")
+saw = NodePath("../SlicePlacer")

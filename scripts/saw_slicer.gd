@@ -1,3 +1,4 @@
+class_name SawSlicer
 extends Node2D
 
 @export var line: PackedScene
