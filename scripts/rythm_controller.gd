@@ -58,4 +58,3 @@ func _process(delta: float) -> void:
 			failed = false
 			jermaSquish = false
 			enemySquish = false
-		

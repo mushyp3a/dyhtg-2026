@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bwp0k7ha5ih1b" path="res://images/hallwayBackgroundCrop.png" id="1_417ia"]
 [ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="1_mx355"]
 [ext_resource type="Texture2D" uid="uid://d0d1pvbyf23ku" path="res://images/jerma_hiding.png" id="2_bg5n2"]
-[ext_resource type="Resource" uid="uid://d3oqybgvqw36v" path="res://resources/test.tres" id="2_g2ggn"]
+[ext_resource type="Resource" uid="uid://cof0wmd8kq6i0" path="res://resources/security.tres" id="2_g2ggn"]
 [ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="3_20hls"]
-[ext_resource type="Texture2D" uid="uid://tpmp1xe2lh6w" path="res://images/jerma_security.png" id="4_6d64a"]
+[ext_resource type="Texture2D" uid="uid://do8bmoub6n0sb" path="res://images/jerma_security_back.png" id="6_g2ggn"]
+[ext_resource type="Script" uid="uid://ddxf22dnrdgn0" path="res://scripts/mr_security.gd" id="7_g2ggn"]
 
 [node name="Security" type="Control" unique_id=1454666892]
 layout_mode = 3
@@ -69,5 +70,9 @@ texture = ExtResource("2_bg5n2")
 [node name="JermaSecurity" type="Sprite2D" parent="." unique_id=1630277126]
 position = Vector2(480, 304)
 scale = Vector2(0.5696864, 0.5696864)
-texture = ExtResource("4_6d64a")
+texture = ExtResource("6_g2ggn")
 offset = Vector2(-17.065, 0)
+script = ExtResource("7_g2ggn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1613133300]
+offset = Vector2(576.036, 324.014)
