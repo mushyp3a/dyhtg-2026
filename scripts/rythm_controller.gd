@@ -44,12 +44,11 @@ func beatHit(x) -> void:
 			level.magicalMysteryScript.onFailure(interaction)
 			failed = false
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_released("jerma") and beatActive:
+	if Input.is_action_just_released("jerma") or Input.is_action_just_pressed("jerma") and beatActive:
 		jermaSquish = true
-	if Input.is_action_just_released("enemy") and beatActive:
+	if Input.is_action_just_released("enemy") or Input.is_action_just_pressed("enemy") and beatActive:
 		enemySquish = true
 		
 	if beatActive:
@@ -58,4 +57,3 @@ func _process(delta: float) -> void:
 			failed = false
 			jermaSquish = false
 			enemySquish = false
-		

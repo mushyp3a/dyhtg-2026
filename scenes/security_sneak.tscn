@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://drnhu4x5ov0qk"]
+
+[ext_resource type="Script" uid="uid://giqv5hiiwiil" path="res://scripts/rythm_controller.gd" id="1_sppnv"]
+[ext_resource type="Resource" uid="uid://d3oqybgvqw36v" path="res://resources/test.tres" id="2_oedne"]
+[ext_resource type="Script" uid="uid://dos3qhffr4v0a" path="res://rhythm_notifier-6a45663809d9d6e8bfeaad0000fd19344d2dfbfe/addons/rhythm_notifier/rhythm_notifier.gd" id="3_5nfor"]
+[ext_resource type="Texture2D" uid="uid://fqcfkfyhessx" path="res://images/hallwayBackground.png" id="4_oedne"]
+
+[node name="SecuritySneak" type="Node2D" unique_id=336579396]
+
+[node name="RythmController" type="Node2D" parent="." unique_id=58117143]
+position = Vector2(-164, -114)
+script = ExtResource("1_sppnv")
+level = ExtResource("2_oedne")
+
+[node name="RythmNotifier" type="Node" parent="." unique_id=445155929]
+script = ExtResource("3_5nfor")
+bpm = 120.0
+beat_length = 0.5
+running = true
+metadata/_custom_type_script = "uid://dos3qhffr4v0a"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1985246123]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -579.55554
+offset_top = -326.0
+offset_right = 579.55554
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=366428566]
+layout_mode = 0
+offset_right = 1162.6666
+offset_bottom = 654.0
+texture = ExtResource("4_oedne")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=602622685]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 287.4
+offset_top = -326.0
+offset_right = 1446.5123
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2" unique_id=2112385246]
+layout_mode = 0
+offset_right = 1162.6666
+offset_bottom = 654.0
+texture = ExtResource("4_oedne")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1456794056]
