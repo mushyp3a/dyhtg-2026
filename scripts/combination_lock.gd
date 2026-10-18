@@ -1,3 +1,4 @@
+class_name CombinationLock
 extends Node
 
 @export var lock: Node2D
