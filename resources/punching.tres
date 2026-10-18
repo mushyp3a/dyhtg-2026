@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Level_Beats" format=3 uid="uid://dpdeooqqh6yiu"]
 
-[ext_resource type="Script" uid="uid://pyso7w8if4en" path="res://scripts/demo_actions.gd" id="1_m80yk"]
+[ext_resource type="Script" uid="uid://dc3tot1myvbs4" path="res://scripts/punching.gd" id="1_m80yk"]
 [ext_resource type="Script" uid="uid://dthwm7vrtp53j" path="res://scripts/level_res.gd" id="1_o5sgt"]
 
 [resource]
