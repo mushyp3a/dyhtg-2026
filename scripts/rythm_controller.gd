@@ -20,7 +20,7 @@ func _ready() -> void:
 	rythmNotifier = $"../RythmNotifier"
 	delay = rythmNotifier.beat_length - beatWindow/2
 	rythmNotifier.beats(1).connect(beatHit)
-	
+
 func beatHit(x) -> void:
 	barPos = i-1
 	
@@ -33,7 +33,9 @@ func beatHit(x) -> void:
 			j += 1
 	
 		await get_tree().create_timer(delay).timeout
+		# tell the level a beat just happened
 		interaction = currentBar
+		level.magicalMysteryScript.onBeat(interaction)
 		jermaSquish = false
 		enemySquish = false
 		failed = true if interaction != "0" else false

@@ -10,6 +10,9 @@ static var rounds = 0
 func _process(delta: float) -> void:
 	pass
 
+static func onBeat(interaction: String) -> void:
+	print(interaction)
+	
 static func onSuccess(interaction: String) -> void:
 	var scene = Engine.get_main_loop().current_scene
 	var character = scene.find_child("jerma", true, false)
