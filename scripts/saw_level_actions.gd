@@ -5,13 +5,10 @@ static var max_state: int = 16
 
 static var sawSingleton: SawSlicer
 @export var saw: SawSlicer
-static var sceneChangerSingleton: SceneChanger
-@export var sceneChanger: SceneChanger
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sawSingleton = saw
-	sceneChangerSingleton = sceneChanger
 	
 static func start_level():
 	state = 0
@@ -29,7 +26,7 @@ static func onSuccess(interaction: String) -> void:
 		max_state += 1
 	
 static func onFailure(interaction: String) -> void:
-	sceneChangerSingleton.restart_level()
+	SceneChanger.restart_level()
 	
 static func explode_wall() -> void:
 	pass
