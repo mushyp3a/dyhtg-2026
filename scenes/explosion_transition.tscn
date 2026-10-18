@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://iiqim6ea86ak"]
+
+[ext_resource type="Script" uid="uid://f761vjpftkse" path="res://scripts/transition.gd" id="1_adnda"]
+[ext_resource type="Texture2D" uid="uid://dx1jig8vj1stp" path="res://images/boom.png" id="2_adnda"]
+
+[node name="TransitionNode" type="Node2D" unique_id=507145665 node_paths=PackedStringArray("transition_node")]
+z_index = 1000
+script = ExtResource("1_adnda")
+transition_node = NodePath(".")
+transition_max_time = 0.6
+transition_max_rot = 720.0
+transition_max_scale = Vector2(10, 10)
+sound_link = "res://sfx/explosion.mp3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1793463012]
+texture = ExtResource("2_adnda")

@@ -39,8 +39,9 @@ func _ready() -> void:
 	add_child(music_player)
 	music_player.finished.connect(_on_music_finished)
 
-func next_level():
+func next_level(delay: float = 0):
 	music_player.stop()
+	await get_tree().create_timer(delay).timeout
 	current_level = current_level + 1
 	if current_level < levels.size():
 		get_tree().change_scene_to_file(levels[current_level])
