@@ -2,6 +2,8 @@ extends Node
 
 class_name Transition
 
+var audio_player: AudioStreamPlayer = AudioStreamPlayer.new()
+
 var transitioning: bool = false
 var transition_state: int = 0
 var transition_time: float = 0
@@ -12,7 +14,19 @@ var transition_time: float = 0
 @export var transition_max_scale: Vector2
 @export var transition_base_scale: Vector2
 
+@export var sound_link: String
+var sfx: Resource
+
+func _ready() -> void:
+	if sound_link != "":
+		sfx = load(sound_link)
+	add_child(audio_player)
+	audio_player.stream = sfx
+
 func start_transitioning() -> void:
+	audio_player.stop()
+	audio_player.stream = sfx
+	audio_player.play()
 	transitioning = true
 	transition_time = 0
 	transition_state = 0

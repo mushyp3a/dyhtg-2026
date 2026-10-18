@@ -11,6 +11,7 @@ transition_node = NodePath(".")
 transition_max_time = 0.7
 transition_max_rot = 1440.0
 transition_max_scale = Vector2(13, 13)
+sound_link = "res://sfx/jerma_lose_transition_2.mp3"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1793463012]
 texture = ExtResource("2_htqmt")
