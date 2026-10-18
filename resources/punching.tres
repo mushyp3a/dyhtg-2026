@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_o5sgt")
-bars = ["0000", "l0r0", "r0l0", "l0r0", "r0l0"]
+bars = ["0000", "00l0", "00r0", "00l0", "00r0"]
 magicalMysteryScript = ExtResource("1_m80yk")
 metadata/_custom_type_script = "uid://dthwm7vrtp53j"

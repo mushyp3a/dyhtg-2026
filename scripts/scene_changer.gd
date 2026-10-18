@@ -6,9 +6,11 @@ var music_player: AudioStreamPlayer
 var music = [
 	#preload("res://sfx/StageOneSawing.wav"),
 	#preload("res://sfx/StageTwoGuards.wav"),
+	#preload("res://sfx/StageFiveCombinationLock.wav"),
+	preload("res://sfx/StageSixSafePunching.wav"),
 	preload("res://sfx/StageFiveCombinationLock.wav"),
-	preload("res://sfx/StageSixSafePunching.wav")
 ]
+
 
 # MAKE SURE TO UNCOMMENT AFTER COMMIT
 var levels = [
@@ -16,13 +18,21 @@ var levels = [
 	#"res://scenes/security.tscn",
 	#"res://scenes/lasers.tscn",
 	# "res://scenes/hacking.tscn",
-	"res://scenes/combination_lock_level.tscn",
-	"res://scenes/punching.tscn"
-	#"res://scenes/ending_scene.tscn"
+	#"res://scenes/combination_lock_level.tscn",
+	"res://scenes/punching.tscn",
+	#"res://scenes/ending_scene.tscn",
+	"res://ui stuff/credits"
+	
 ]
 
 var transition_node: TransitionNode
 var restart_transition_node: RestartTransitionNode
+var music_loops = 0
+
+func _on_music_finished():
+	music_loops += 1
+	if music_loops < 4:
+		music_player.play()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,6 +40,7 @@ func _ready() -> void:
 	restart_transition_node = get_node("/root/RestartTransitionNode") as RestartTransitionNode
 	music_player = AudioStreamPlayer.new()
 	add_child(music_player)
+	music_player.finished.connect(_on_music_finished)
 
 func next_level():
 	music_player.stop()
@@ -58,7 +69,6 @@ func _process(delta: float) -> void:
 var jerma_restart_delay: float = 0.7
 
 func restart_level():
-	music_player.stop()
 	print("Transitioning... >=)")
 	restart_transition_node.start_transitioning()
 	await get_tree().create_timer(jerma_restart_delay).timeout
