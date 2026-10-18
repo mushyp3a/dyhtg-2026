@@ -5,6 +5,7 @@
 
 [node name="TransitionNode" type="Node2D" unique_id=507145665 node_paths=PackedStringArray("transition_node")]
 z_index = 1000
+position = Vector2(550, 300)
 script = ExtResource("1_tnlg3")
 transition_node = NodePath(".")
 transition_max_time = 0.7
