@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bw1qlwln7pc13"]
+
+[ext_resource type="Script" uid="uid://f761vjpftkse" path="res://scripts/transition.gd" id="1_tnlg3"]
+[ext_resource type="Texture2D" uid="uid://c801yud8bp2l5" path="res://images/jerma_face.png" id="2_htqmt"]
+
+[node name="TransitionNode" type="Node2D" unique_id=507145665 node_paths=PackedStringArray("transition_node")]
+script = ExtResource("1_tnlg3")
+transition_node = NodePath(".")
+transition_max_time = 0.7
+transition_max_rot = 1440.0
+transition_max_scale = Vector2(13, 13)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1793463012]
+texture = ExtResource("2_htqmt")

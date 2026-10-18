@@ -12,14 +12,19 @@ var levels = [
 	#"res://scenes/ending_scene.tscn"
 ]
 
+var transition_node: TransitionNode
+var restart_transition_node: RestartTransitionNode
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	transition_node = get_node("/root/TransitionNode") as TransitionNode
+	restart_transition_node = get_node("/root/RestartTransitionNode") as RestartTransitionNode
 
 func next_level():
 	current_level = current_level + 1
 	if current_level < levels.size():
 		get_tree().change_scene_to_file(levels[current_level])
+		transition_node.start_transitioning()
 
 #this function exists for replaying game
 #other ways to do this if it breaks a bunch of shit
@@ -34,4 +39,8 @@ func _process(delta: float) -> void:
 	pass
 
 func restart_level():
-	get_tree().reload_current_scene()
+	print("Transitioning... >=)")
+	restart_transition_node.start_transitioning()
+	transition_node.show()
+	transition_node.start_transitioning()
+	#get_tree().reload_current_scene()

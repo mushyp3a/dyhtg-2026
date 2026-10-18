@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneChanger="*uid://c7xc38uwd0kx2"
+TransitionNode="*uid://ydxlrlh8mydn"
+RestartTransitionNode="*uid://bw1qlwln7pc13"
 
 [display]
 
