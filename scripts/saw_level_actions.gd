@@ -28,7 +28,7 @@ static func onSuccess(interaction: String) -> void:
 		sawSingleton.slice()
 	elif state == max_state:
 		explode_wall()
-		SceneChanger.next_level(1.3)
+		SceneChanger.next_level(0.7)
 	
 static func onFailure(interaction: String) -> void:
 	print("Failed the saw mission :C")
