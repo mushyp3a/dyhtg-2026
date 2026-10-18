@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	pass
 
 static func onSuccess(interaction: String) -> void:
+	print("You've won... This round (combination lock) >:3")
 	match interaction:
 		"l":
 			combination_lock_singleton.comb_left()
@@ -21,4 +22,5 @@ static func onSuccess(interaction: String) -> void:
 			combination_lock_singleton.comb_right()	
 	
 static func onFailure(interaction: String) -> void:
+	print("Restarting combination lock level sucker! >=)")
 	SceneChanger.restart_level()
