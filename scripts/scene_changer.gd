@@ -13,10 +13,12 @@ var levels = [
 ]
 
 var transition_node: TransitionNode
+var restart_transition_node: RestartTransitionNode
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	transition_node = get_node("/root/TransitionNode") as TransitionNode
+	restart_transition_node = get_node("/root/RestartTransitionNode") as RestartTransitionNode
 
 func next_level():
 	current_level = current_level + 1
@@ -36,5 +38,10 @@ func start_game():
 func _process(delta: float) -> void:
 	pass
 
+var jerma_restart_delay: float = 0.7
+
 func restart_level():
+	print("Transitioning... >=)")
+	restart_transition_node.start_transitioning()
+	await get_tree().create_timer(jerma_restart_delay).timeout
 	get_tree().reload_current_scene()
