@@ -13,10 +13,12 @@ var levels = [
 ]
 
 var transition_node: TransitionNode
+var restart_transition_node: RestartTransitionNode
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	transition_node = get_node("/root/TransitionNode") as TransitionNode
+	restart_transition_node = get_node("/root/RestartTransitionNode") as RestartTransitionNode
 
 func next_level():
 	current_level = current_level + 1
@@ -37,4 +39,9 @@ func _process(delta: float) -> void:
 	pass
 
 func restart_level():
-	get_tree().reload_current_scene()
+	print("Transitioning... >=)")
+	restart_transition_node.start_transitioning()
+	transition_node.goto
+	transition_node.show()
+	transition_node.start_transitioning()
+	#get_tree().reload_current_scene()
