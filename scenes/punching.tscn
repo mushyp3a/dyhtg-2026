@@ -12,7 +12,7 @@
 script = ExtResource("1_7wbwj")
 level = ExtResource("2_pfdg8")
 
-[node name="RhythmNotifier" type="Node" parent="." unique_id=276379582]
+[node name="RythmNotifier" type="Node" parent="." unique_id=276379582]
 script = ExtResource("1_5yfs8")
 bpm = 120.0
 beat_length = 0.5
