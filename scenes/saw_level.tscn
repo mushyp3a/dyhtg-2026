@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw8e3fmacum5k"]
 
-[ext_resource type="Texture2D" uid="uid://di71xhqtd2jpk" path="res://images/brick_wall.png" id="1_02j2d"]
+[ext_resource type="Texture2D" uid="uid://b56xhkjtbal3g" path="res://images/brick_wall_resized.png" id="1_pi2s3"]
 [ext_resource type="Script" uid="uid://dcb0ivcfwekri" path="res://scripts/saw_slicer.gd" id="2_6gmm1"]
 [ext_resource type="PackedScene" uid="uid://muet7gyaigpy" path="res://scenes/line_scene.tscn" id="3_l20sg"]
 [ext_resource type="Texture2D" uid="uid://dl6un4o48wujs" path="res://images/saw_rotated.png" id="4_jbwg5"]
@@ -10,10 +10,11 @@
 [node name="SawLevel" type="Node2D" unique_id=217463069]
 
 [node name="Background" type="Node2D" parent="." unique_id=313767864]
-position = Vector2(960, 540)
+position = Vector2(576, 324)
+scale = Vector2(1.1, 1.1)
 
 [node name="WallSprite2D" type="Sprite2D" parent="Background" unique_id=1606584272]
-texture = ExtResource("1_02j2d")
+texture = ExtResource("1_pi2s3")
 
 [node name="SlicePlacer" type="Node2D" parent="." unique_id=842479282 node_paths=PackedStringArray("line_parent")]
 position = Vector2(300, 130)
