@@ -7,5 +7,6 @@
 
 [node name="TransitionNode" parent="." unique_id=507145665 instance=ExtResource("1_77u2i")]
 
-[node name="SceneChanger" type="Node" parent="." unique_id=1314649445]
+[node name="SceneChanger" type="Node" parent="." unique_id=1314649445 node_paths=PackedStringArray("transition_node")]
 script = ExtResource("2_3dn78")
+transition_node = NodePath("../TransitionNode")
